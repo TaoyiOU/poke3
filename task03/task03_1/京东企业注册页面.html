@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东企业注册页面</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="dbody">
+    <!--表单-->
+    <form action="https://www.baidu.com" method="get" target="_blank">
+        <!-----------------------账户信息开始--------------------->
+        <h3>账户信息</h3>
+        <div class="item">
+            <label>
+                <span><b>*</b>用户名：</span>
+                <input type="text" name="user">
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <span><b>*</b>请设置密码：</span>
+                <input type="password" name="psw">
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <span><b>*</b>请确认密码：</span>
+                <input type="password" name="apsw">
+            </label>
+        </div>
+        <!-----------------------账户信息结束--------------------->
+
+        <!-----------------------公司信息开始--------------------->
+        <h3>公司信息</h3>
+        <div class="item">
+            <label>
+                <span><b>*</b>公司名称：</span>
+                <input type="text" name="cname">
+            </label>
+        </div>
+        <div class="item">
+            <span><b>*</b>公司所在地：</span>
+            <select name="clocation">
+                <option selected="selected">请选择</option>
+                <option value="BJ">北京</option>
+                <option value="SH">上海</option>
+                <option value="GD">广东</option>
+            </select>
+            <select name="cloaction">
+                <option selected="selected">请选择</option>
+                <option value="BJS">北京市</option>
+                <option value="SHS">上海市</option>
+                <option value="GZS">广州市</option>
+            </select>
+            <select name="cloaction">
+                <option selected="selected">请选择</option>
+                <option value="BJWH">北京五环</option>
+                <option value="SHPD">上海浦东</option>
+                <option value="GZTH">广州天河</option>
+            </select>
+        </div>
+        <div class="item">
+            <label>
+                <span><b>*</b>公司地址：</span>
+                <input type="text" name="cadress">
+            </label>
+        </div>
+        <div class="itembuy">
+            <span><b>*</b>购买类型/用途：</span>
+            <div class="buybuy">
+                <label><input type="checkbox" name="cbuy">IT设备</label>
+                <label><input type="checkbox" name="cbuy">数码通讯</label>
+                <label><input type="checkbox" name="cbuy">办公用品耗材</label>
+                <label><input type="checkbox" name="cbuy">大家电</label>
+                <label><input type="checkbox" name="cbuy">项目合作-政府采购</label>
+                <label><input type="checkbox" name="cbuy">礼品</label>
+                <label><input type="checkbox" name="cbuy">商旅(机票/酒店等)</label>
+                <label><input type="checkbox" name="cbuy">礼品卡</label>
+            </div>
+        </div>
+        <div class="item">
+            <label>
+                <span>注册邀请码：</span>
+                <input type="text" name="cinvite">
+            </label>
+        </div>
+        <div class="item">
+            <span>企业人数：</span>
+            <select name="cnumbers">
+                <option selected="selected">请选择</option>
+                <option value="1to49">1-49</option>
+                <option value="50to99">50-99</option>
+                <option value="100to499">100-499</option>
+                <option value="500to999">500-999</option>
+                <option value="1000more">1000以上</option>
+            </select>
+        </div>
+        <div class="item">
+            <span>公司行业：</span>
+            <select name="cindustry" class="cindustry">
+                <option selected="selected">请选择</option>
+                <option value="Game">网络游戏</option>
+                <option value="IT">IT培训</option>
+                <option value="Finance">金融行业</option>
+                <option value="Realestate">房地产</option>
+                <option value="Insurance">保险</option>
+            </select>
+        </div>
+        <div class="item">
+            <span>公司性质：</span>
+            <select name="cnature" class="cnature">
+                <option selected="selected">请选择</option>
+                <option value="government">政府</option>
+                <option value="GY">国营</option>
+                <option value="SY">私营</option>
+                <option value="ZWHZ">中外合资</option>
+                <option value="WZ">外资</option>
+                <option value="other">其他</option>
+            </select>
+        </div>
+        <!-----------------------公司信息结束--------------------->
+
+        <!-----------------------联系人信息开始--------------------->
+        <h3>联系人信息</h3>
+        <div class="item">
+            <label>
+                <span><b>*</b>联系人名字：</span>
+                <input type="text" name="linkman">
+            </label>
+        </div>
+        <div class="item">
+            <span><b>*</b>所在部门：</span>
+            <select name="department">
+                <option selected="selected">请选择</option>
+                <option value="office">办公室</option>
+                <option value="market">市场部</option>
+                <option value="shop">采购部</option>
+                <option value="tech">技术部</option>
+                <option value="power">人力资源</option>
+                <option value="other">其他</option>
+            </select>
+        </div>
+        <div class="item">
+            <label>
+                <span><b>*</b>固定电话：</span>
+                <input type="text" name="hphone">
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <span><b>*</b>验证手机：</span>
+                <input type="text" name="phone">
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <span><b>*</b>短信验证码：</span>
+                <input type="text" name="message" class="message">
+                <button><a href="javascript:;">获取短信验证码</a></button>
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <span>联系人邮箱：</span>
+                <input type="email" name="email">
+            </label>
+        </div>
+        <div class="item">
+            <label>
+                <span><b>*</b>验证码：</span>
+                <input type="text" name="Verification" class="message ver">
+                <img src="./images/yzm.png" alt="">
+                <span class="nosee">看不清？<a href="javascript:;">换一张</a></span>
+            </label>
+        </div>
+        <div class="i">
+            <input type="checkbox" checked="checked">我已阅读并同意
+            <a href="javascript:;">《京东用户注册协议》</a>
+            <a href="javascript:;">《隐私政策》</a>
+        </div>
+        <div class="i">
+            <input type="image" src="./images/regist-btn.jpg" onclick="document.form.submit();">
+        </div>
+        <!-----------------------联系人信息结束--------------------->
+    </form>
+</div>
+</body>
+</html>

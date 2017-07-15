@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div>
+    <!--输入第一个数字-->
+    <input type="text" value="请输入数字" id="firstNum" class="num">
+    <!--操作符的选择-->
+    <select id="calculator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <!--输入第二个数字-->
+    <input type="text" value="请输入数字" id="lastNum" class="num">
+    <!--计算按钮-->
+    <button id="btn">计算</button>
+    <span>
+        结果：<b id="result">0</b>
+    </span>
+</div>
+<script>
+    //获取标签
+    var firstNum = document.getElementById('firstNum');
+    var lastNum = document.getElementById('lastNum');
+    var calculator = document.getElementById('calculator');
+    var btn = document.getElementById('btn');
+    var result = document.getElementById('result');
+    //记录两个数字的计算结果
+    var count = 0;
+    //记录选择的操作符
+    var calc = '';
+    //鼠标点击事件
+    firstNum.onmousedown = function () {
+        //把默认文字清除
+        firstNum.value = '';
+    };
+    lastNum.onmousedown = function () {
+        lastNum.value = '';
+    };
+    //点击按钮
+    btn.onclick = function () {
+        //获取操作符
+        calc = calculator.value;
+//        alert(calc);
+        if(isNaN(firstNum.value) || isNaN(lastNum.value)) { //判断是否输入数字
+            alert('请输入数字');
+        } else if(firstNum.value.length == 0 || lastNum.value.length == 0) { //判断是否有输入内容
+            alert('请输入数字');
+        } else{
+            switch (calc){  //parseFloat 会把小数点后面如果是0则去掉
+                case '+':
+                    count = parseFloat((parseFloat(firstNum.value) + parseFloat(lastNum.value)).toFixed(2));
+                    break;
+                case '-':
+                    count = parseFloat((parseFloat(firstNum.value) - parseFloat(lastNum.value)).toFixed(2));
+                    break;
+                case '*':
+                    count = parseFloat((parseFloat(firstNum.value) * parseFloat(lastNum.value)).toFixed(2));
+                    break;
+                case '/':
+                    if(lastNum.value == 0){
+                        alert('除数不能为0');
+                    }else{
+                        count = parseFloat((parseFloat(firstNum.value) / parseFloat(lastNum.value)).toFixed(2));
+                        break;
+                    }
+                case '%':
+                    if(lastNum.value == 0){
+                        alert('除数不能为0');
+                    }else{
+                        count = parseFloat((parseFloat(firstNum.value) % parseFloat(lastNum.value)).toFixed(2));
+                        break;
+                    }
+
+            }
+            result.innerText = count;
+        }
+    };
+
+</script>
+</body>
+</html>

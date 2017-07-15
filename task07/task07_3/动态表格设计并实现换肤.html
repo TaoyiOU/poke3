@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格设计并实现换肤</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="0" id="myTable">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>手机号</th>
+    </tr>
+    </thead>
+</table>
+<button id="addBtn">添加</button>
+<button id="delBtn">删除</button>
+<button id="skin1">换肤1</button>
+<button id="skin2">换肤2</button>
+<script>
+    window.onload = function () {
+        //1.获取标签
+        var myTable = document.getElementById('myTable');
+        var addBtn = document.getElementById('addBtn');
+        var delBtn = document.getElementById('delBtn');
+        var skin1 = document.getElementById('skin1');
+        var skin2 = document.getElementById('skin2');
+
+        //2.创建tbody
+        var tbody = document.createElement('tbody');
+
+        //3.把tbody添加到table中
+        myTable.appendChild(tbody);
+
+        //4.定义变量
+        var index = 0; //记录一共有多少行
+        var name = ['张三', '李四', '王五', '小明', '小红', '小刚'];
+        var age = ['21', '22', '23', '24', '25', '26'];
+        var nameRandom = 0;
+        var ageRandom = 0;
+        //5.点击添加按钮，创建行
+        addBtn.onclick = function () {
+             //2.1 创建table 第一行
+//            tbody.insertRow(0);
+//            //2.2 插入第一个单元格
+//            tbody.rows[0].insertCell(0);
+//            //给第一个单元格添加值
+//            tbody.rows[0].cells[0].appendChild(document.createTextNode('1'));
+//            //2.1 创建table 第二行
+//            tbody.insertRow(1);
+//            //2.2 插入第一个单元格
+//            tbody.rows[1].insertCell(0);
+//            //给第一个单元格添加值
+//            tbody.rows[1].cells[0].appendChild(document.createTextNode('2'));
+            nameRandom = Math.floor(Math.random() * name.length);
+            ageRandom = Math.floor(Math.random() * name.length);
+            //点击一次按钮，添加一行
+            index++;
+            for (var i = index - 1; i < index; i++) {
+                tbody.insertRow(i); //添加第i行
+                for (var j = 0; j < 5; j++) {
+                    tbody.rows[i].insertCell(j); //添加第j个单元格
+                    switch (j) {
+                        case 0:
+                            //给单元格添加内容
+                            tbody.rows[i].cells[j].appendChild(document.createTextNode(('0' + index).slice(-2)));
+                            break;
+                        case 1:
+                            tbody.rows[i].cells[j].appendChild(document.createTextNode('20170' + index));
+                            break;
+                        case 2:
+                            tbody.rows[i].cells[j].appendChild(document.createTextNode(name[nameRandom]));
+                            break;
+                        case 3:
+                            tbody.rows[i].cells[j].appendChild(document.createTextNode(age[ageRandom]));
+                            break;
+                        case 4:
+                            tbody.rows[i].cells[j].appendChild(document.createTextNode('157708512' + ('0' + index).slice(-2)));
+                            break;
+                    }
+                }
+            }
+        }
+
+        //6.点击删除按钮，从后往前逐行删除
+        delBtn.onclick = function () {
+            //删除tbody下面的每一行
+            tbody.removeChild(tbody.children[index - 1]);
+            index --;
+        }
+
+        //7.点击换肤1按钮，替换网页背景
+        skin1.onclick = function () {
+            document.body.style.backgroundImage ='url(images/img1.jpg)';
+        };
+        //8.点击换肤2按钮，替换网页背景
+        skin2.onclick = function () {
+            document.body.style.backgroundImage ='url(images/img2.jpg)';
+        }
+    }
+</script>
+</body>
+</html>

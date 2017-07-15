@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.人民币大小写转换</title>
+</head>
+<body>
+<!--输入数字-->请输入数字：
+<input type="text" id="rmb">
+<button id="btn">RMB大写转换</button>
+结果是：
+<span style="color: red;font-size: 2em" id="num"></span>
+<script>
+    //1.获取标签
+    var rmb = document.getElementById('rmb');
+    var num = document.getElementById('num');
+    var btn = document.getElementById('btn');
+    //2.点击按钮
+    btn.onclick = function () {
+        //清空内容
+        num.innerHTML = '';
+        if (isNaN(rmb.value)) { //判断用户是否输入数字
+            alert('请输入数字');
+        } else if (rmb.value == '') { //判断用户是否输入内容
+            alert('请不要直接点击按钮');
+        } else if (rmb.value.substring() == 0) { //判断用户是否输入空格
+            alert('请输入数字');
+        } else if (rmb.value < 0) { //判断用户是否输入负数
+            alert('请不要输入负数');
+        } else { //是输入正数
+            var o = '';
+            var j = '';
+            for (var i = rmb.value.length - 1; i >= 0; i--) {
+                if (rmb.value[0] == 0) {
+                    alert('数字不能以0开头，请重新输入');
+                    return '';
+                } else {
+                    //charAt 获取某一具体位置对应的字符
+                    o = rmb.value.charAt(i);
+                    switch (o){
+                        case "0": j = "零" ; break;
+                        case "1": j = "一" ; break;
+                        case "2": j = "二" ; break;
+                        case "3": j = "三" ; break;
+                        case "4": j = "四" ; break;
+                        case "5": j = "五" ; break;
+                        case "6": j = "六" ; break;
+                        case "7": j = "七" ; break;
+                        case "8": j = "八" ; break;
+                        case "9": j = "九" ; break;
+                    }
+                    switch (rmb.value.length - i - 1){
+                        case 0: j = j; break;
+                        case 1: if (o != 0) j = j + "十"; break;
+                        case 2: if (o != 0) j = j + "百"; break;
+                        case 3: if (o != 0) j = j + "千"; break;
+                        case 4: j = j + "万"; break;
+                        case 5: if (o != 0) j = j + "十"; break;
+                        case 6: if (o != 0) j = j + "百"; break;
+                        case 7: if (o != 0) j = j + "千"; break;
+                        case 8: j = j + "亿"; break;
+                        case 9: j = j + "十"; break;
+                    }
+                        num.innerText = j + num.innerText;
+                }
+            }
+            while (num.innerText.search("零零") != -1 || num.innerText.search("零亿") != -1 || num.innerText.search("亿万") != -1 || num.innerText.search("零万") != -1) {
+                num.innerText = num.innerText.replace("零亿", "亿");
+                num.innerText = num.innerText.replace("亿万", "亿");
+                num.innerText = num.innerText.replace("零万", "万");
+                num.innerText = num.innerText.replace("零零", "零");
+            }
+            //替换以“零”结尾的，为“”
+            if (num.innerText.lastIndexOf("零") == num.innerText.length - 1) {
+                num.innerText = num.innerText.substr(0, num.innerText.length - 1);
+            }
+                num.innerText = num.innerText + '元整';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格练习</title>
+</head>
+<body>
+<!--三行三列-->
+<!--border:表格边框宽度；cellspacing：单元格之间的距离；cellpadding：单元格与内容之间的距离 align：内容水平对齐方式（left、right、center）-->
+<table border="0" cellspacing="1" cellpadding="0" width="800" align="center">
+    <tr>
+        <!--横向合并单元格-->
+        <td colspan="3" ><img src="images/red.png" alt=""></td>
+    </tr>
+
+    <tr height="400" align="center" bgcolor="#F9EAC2" >
+        <td width="25" bgcolor="white"></td>
+        <td>
+            <!--表格嵌套表格，六行三列-->
+            <!--border=0 cellspacing设为1，为细线表格-->
+            <table border="0" cellspacing="1" cellpadding="5" bgcolor="#C0A45B" width="700">
+                <caption style="padding-bottom: 20px"><font size="5"><b>产品信息</b></font></caption>
+                <tr height="40" bgcolor="#F9EAC2">
+                    <td>材料成分：棉80% 聚酯纤维20%</td>
+                    <td>流行元素：纽扣</td>
+                    <td>袖长：长袖</td>
+                </tr>
+                <tr height="40" bgcolor="#FAF3E1">
+                    <td>服装版型：宽松</td>
+                    <td>衣长：常规款</td>
+                    <td>领型：连帽</td>
+                </tr>
+                <tr height="40" bgcolor="#F9EAC2">
+                    <td>袖型：常规</td>
+                    <td>图案：纯色</td>
+                    <td>适用年龄：25-29周岁</td>
+                </tr>
+                <tr height="40" bgcolor="#FAF3E1">
+                    <td>风格：通勤</td>
+                    <td>通勤：韩版</td>
+                    <td>年份季节：2016年秋季</td>
+                </tr>
+                <tr height="40" bgcolor="#F9EAC2">
+                    <td>主要颜色：灰色</td>
+                    <td>尺码：S L M</td>
+                    <td>产品等级：安全级</td>
+                </tr>
+                <tr height="40" bgcolor="#FAF3E1">
+                    <td>面料弹性：轻微弹性</td>
+                    <td>厚薄指数：厚薄适中</td>
+                    <td>版型：宽松</td>
+                </tr>
+            </table>
+        </td>
+        <td width="25" bgcolor="white"></td>
+    </tr>
+
+    <tr>
+        <td colspan="3"><img src="images/red.png" alt=""></td>
+    </tr>
+</table>
+</body>
+</html>

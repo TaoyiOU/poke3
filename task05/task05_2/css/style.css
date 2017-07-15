@@ -1,0 +1,256 @@
+/*清空默认边距*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #9d9d9d;
+}
+@font-face {
+    font-family: "思源雅黑粗";
+    src: url('../fonts/SourceHanSansCN-Heavy.otf');
+}
+@font-face {
+    font-family: "思源雅黑细";
+    src: url('../fonts/SourceHanSansCN-ExtraLight.otf');
+}
+/*导航开始*/
+.nav{
+    width: 100%;
+    height: 40px;
+    background: #222222;
+    position: fixed;
+}
+.nav .navbar{
+    width: 1170px;
+    height: 40px;
+    /*background: pink;*/
+    margin: 0 auto;
+}
+.navbar .navbar-header{
+    height: 40px;
+    line-height: 40px;
+    /*background: blue;*/
+    font-size: 18px;
+    float: left;
+    margin-right: 40px;
+}
+.navbar .navbar-content{
+    height: 40px;
+    line-height: 40px;
+    /*background: yellow;*/
+    font-size: 14px;
+}
+.navbar-content .navbar-nav{
+    float: left;
+    list-style: none;
+}
+.navbar-content .navbar-nav li{
+    float: left;
+    margin-right: 30px;
+}
+.navbar-content .navbar-right{
+    /*background: tomato;*/
+    list-style: none;
+    float: right;
+}
+.navbar a:hover{
+    color: #fff;
+}
+/*导航结束*/
+
+/*封面开始*/
+.head{
+    width: 100%;
+    height: 485px;
+    background: #2C143E;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.head .head-content{
+    width: 1170px;
+    /*background: red;*/
+    margin: 100px auto;
+    color: #fff;
+    text-align: center;
+}
+.head-content h1{
+     font-size: 100px;
+     font-family:'思源雅黑粗';
+    text-shadow: 0 0 10px #000;
+ }
+.head-content h2{
+    font-size: 32px;
+    font-family:'思源雅黑细';
+}
+.head-content p{
+    width: 280px;
+    height: 50px;
+    line-height: 50px;
+    background: #337AB7;
+    border-radius: 5px;
+    margin: 30px auto 20px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4),0 0 30px rgba(0,0,0,0.75);
+}
+.head-content p a{
+    color: #fff;
+    font-size: 18px;
+}
+.head-content>a{
+    font-size: 14px;
+}
+.head-content>a:hover{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+/*封面结束*/
+
+/*论坛栏开始*/
+.social{
+    width: 100%;
+    height: 55px;
+    background: #F5F5F5;
+}
+.social .social-content{
+    text-align: center;
+    line-height: 55px;
+}
+.social .social-content a{
+    color: #555555;
+    font-size: 14px;
+    margin: 0 10px;
+}
+.social .social-content a:first-child::before{
+    content: url("../images/weixin.png");
+}
+.social .social-content a:last-child::before{
+    content: url("../images/weibo.png");
+}
+.social .social-content a:first-child:hover{
+     border-bottom: 1px solid #555;
+ }
+.social .social-content a:last-child:hover{
+    color: orangered;
+    border-bottom: 1px solid orangered;
+}
+/*论坛栏结束*/
+
+/*内容开始*/
+.content{
+    width: 100%;
+    height: 600px;
+    background: #FFFFFF;
+    border-top: 1px solid #DDDDDD;
+}
+.content .content-head{
+    margin: 60px 0;
+    text-align: center;
+}
+.content .content-head h2{
+    font-family: '思源雅黑细';
+    font-size: 42px;
+    color: #222222;
+}
+.content .content-head p{
+    font-size: 14px;
+    color: #222222;
+}
+.content .row{
+    width: 1170px;
+    margin: 0 auto;
+}
+.row .row-content{
+    width: 260px;
+    height: 350px;
+    background: #fff;
+    border: 1px solid #DDDDDD;
+    padding: 5px;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.row-content .row-content-up img{
+    width: 248px;
+}
+.row-content .row-content-down{
+    text-align: center;
+    font-family: '思源雅黑细';
+}
+.row-content .row-content-down h3{
+    margin-top: 20px;
+    color: #337AB7;
+}
+.row-content .row-content-down p{
+   font-size: 15px;
+   margin-top: 10px;
+}
+.row-content .row-content-down a h3:hover{
+    color: darkblue;
+}
+/*内容结束*/
+
+/*页脚开始*/
+.footer{
+    width: 100%;
+    background: #fff;
+    /*清除浮动*/
+    clear: both;
+    border-top: 1px solid #E5E5E5;
+}
+.footer .footer-content{
+    width: 1170px;
+    margin: 0 auto;
+}
+.footer-content .fc-up{
+    position: relative;
+    height: 180px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.fc-up .fc-left{
+    width: 550px;
+    /*background: blue;*/
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+.fc-up .fc-left p{
+    font-size: 14px;
+}
+.fc-up .fc-right{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 500px;
+    /*background: yellow;*/
+}
+.fc-up .fc-right .fc-list{
+    margin-right: 50px;
+    float: left;
+}
+.fc-up .fc-right .fc-list h4{
+    color: #533B77;
+    margin-bottom: 5px;
+    font-family: '思源雅黑细';
+
+}
+.fc-up .fc-right .fc-list ul{
+    list-style: none;
+}
+.fc-up .fc-right .fc-list ul li{
+   font-size: 14px;
+}
+.fc-down{
+    height: 30px;
+    margin: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+.fc-down p{
+    color: #9D9D9D;
+}
+.fc-down a::after{
+    content: '|';
+}
+/*页脚结束*/

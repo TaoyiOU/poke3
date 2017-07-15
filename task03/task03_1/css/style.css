@@ -1,0 +1,134 @@
+/*清空默认边距*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f2f2f2;
+}
+a{
+    text-decoration: none;
+}
+.dbody{
+    width: 900px;
+    /*height: 900px;*/
+    background: white;
+    border: 1px solid #cccccc;
+    border-top: none;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 8px;
+    color: grey;
+}
+h3{
+    background: #f7f7f7;
+    font-size: 15px;
+    font-weight: normal;
+    text-indent: 1em;
+    height: 28px;
+    line-height: 28px;
+    color: black;
+    border-top: 1px solid #ccc;
+}
+.item{
+    height: 58px;
+    /*background: skyblue;*/
+    /*border: 1px solid #000;*/
+    line-height: 58px;
+    margin-left: 150px;
+
+}
+span{
+    display: inline-block;
+    width: 130px;
+    /*background: greenyellow;*/
+    text-align: right;
+    line-height: 58px;
+    font-size: 14px;
+}
+span b{
+    color: red;
+    margin-right: 5px;
+}
+.item input{
+    width: 270px;
+    height: 28px;
+}
+/*公司所在地*/
+.item select{
+    width: 100px;
+    height: 32px;
+    color: gray;
+    font-size: 14px;
+}
+/*购买类型/用途*/
+.itembuy{
+    height: 58px;
+    /*background: skyblue;*/
+    /*border: 1px solid #000;*/
+    margin-left: 150px;
+    position: relative;
+}
+.buybuy{
+    position: absolute;
+    width: 450px;
+    left: 133px;
+    top: 15px;
+    line-height: 28px;
+}
+.itembuy label{
+    font-size: 8px;
+    color: black;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
+/*公司行业*/
+.item .cindustry{
+    width: 300px;
+    height: 32px;
+}
+/*公司性质*/
+.item .cnature{
+    width: 150px;
+    height: 32px;
+}
+/*短信验证码*/
+.item .message{
+    width: 150px;
+    height: 28px;
+    /*position: relative;*/
+}
+button{
+    width: 100px;
+    height: 32px;
+}
+button a{
+    color: black;
+
+}
+/*验证码*/
+.ver{
+    position: relative;
+}
+img{
+    display: inline-block;
+    height: 32px;
+    float: left;
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 5px;
+}
+.nosee{
+    position: absolute;
+    margin-left: 65px;
+}
+/*同意条款*/
+.i{
+    width: 500px;
+    margin-left: 286px;
+    margin-top: 30px;
+}
+.i input[type=image]{
+    margin-bottom: 30px;
+}

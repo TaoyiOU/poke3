@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f2f2f2;
+    margin: 0 auto;
+    font-size: 12px;
+    position: relative;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    color: orangered;
+
+}
+/*导航栏开始*/
+nav{
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+    line-height: 30px;
+}
+.w{
+    width: 990px;
+    /*background: red;*/
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fl b{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(../images/20130330A.png) -90px -23px no-repeat;
+}
+.fl a:hover,.fr a:hover{
+    border-bottom: 1px solid orangered;
+}
+.fr{
+    float: right;
+}
+.fr li{
+    float: left;
+    padding: 0 11px 0 12px;
+}
+/*导航栏结束*/
+/*logo栏开始*/
+#logo{
+    padding: 10px 0;
+    position: relative;
+}
+#logo b{
+    position: absolute;
+    background: url(../images/regist-word.png) no-repeat;
+    width: 111px;
+    height: 46px;
+    top: 18px;
+    left: 180px;
+}
+/*logo栏结束*/
+/*注册界面开始*/
+#regist{
+    margin-bottom: 10px;
+    background: #fff;
+}
+/*登录栏开始*/
+.regist-login{
+    padding-right: 10px;
+    height: 32px;
+    line-height: 32px;
+    background: #f2f2f2;
+    position: relative;
+}
+.tab{
+    height: 33px;
+    padding-left: 227px;;
+}
+.regist-login .tab li{
+    float: left;
+    border: 1px solid #ddd;
+    background: #f7f7f7;
+    margin-right: 5px;
+    font-size: 14px;
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+}
+.tab .curr{
+    color: #C91623;
+}
+.tab li:last-child{
+    width: 224px;
+}
+.regist-enroll{
+    float: right;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+}
+.regist-enroll span:first-child{
+    margin-right: 15px;
+}
+.regist-enroll a{
+    color: blue;
+}
+/*登录栏结束*/
+/*注册栏开始*/
+#regist .mc{
+    padding-top: 22px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+.reg-top{
+    height: 306px;
+    background: url("../images/reg_bg.gif");
+}
+.reg-mes{
+    margin: 0 19px;
+    height: 73px;
+    line-height: 73px;
+    border-top: 1px solid #e9e9ea;
+    color: #666;
+    position: relative;
+}
+.reg-mes a{
+    color: blue;
+    margin-left: -3px;
+}
+.reg-mes .more{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*注册栏结束*/
+/*表单开始*/
+#regist h3{
+    border-top: 1px solid #e7e7e7;
+    padding: 2px 16px 3px;
+    background: #f7f7f7;
+    height: 28px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.item{
+    padding-top: 9px;
+    height: 58px;
+    line-height: 34px;
+    position: relative;
+}
+.item .label{
+    float: left;
+    width: 290px;
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+    padding-right: 10px;
+}
+.label .star{
+    color: #f00;
+    margin-right: 5px;
+}
+.text{
+    width: 238px;
+    height: 16px;
+    padding: 9px 25px 9px 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+.mar{
+    margin-right: 10px;
+}
+select{
+    height: 34px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #999;
+    /*padding: 6px 0;*/
+}
+.chkbox{
+    /*margin-top: 10px;*/
+}
+.pad{
+    padding-right: 10px;
+}
+.btn{
+    display: inline-block;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    width: 106px;
+    height: 36px;
+    background: #f4f4f4;
+    line-height: 36px;
+    text-align: center;
+}
+.img img{
+    width: 100px;
+    height: 36px;
+    display: inline-block;
+    position: absolute;
+    left: 440px;
+    top: 10px;
+}
+.changeimg{
+    position: absolute;
+    left: 550px;
+    top: 10px;
+    color: #666666;
+}
+#regist .changeimg a{
+    color: blue;
+}
+.btn-img{
+    display: inline-block;
+    border:0 none;
+    width: 270px;
+    height: 36px;
+    background: url(../images/regist-btn.jpg) no-repeat;
+}
+/*表单结束*/
+/*注册界面结束*/
+/*底部开始*/
+#foot{
+    padding-bottom: 30px;
+    text-align: center;
+}
+#foot .link a{
+    margin: 0 10px;
+}
+.copyright{
+    margin: 10px 0;
+}
+/*底部结束*/
+/*弹窗*/
+#thickdiv{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.4;
+    /*使用filter可以设置透明度，filter:alpha在IE下是没有问题的*/
+    filter:alpha(opacity:40);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+#login,#login2{
+    width: 924px;
+    height: 550px;
+    background: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+#login .logintitle{
+    text-align: center;
+    height: 27px;
+    background:#ccc;
+    line-height: 27px;
+}
+.logincontent{
+    margin: 30px;
+    padding-bottom: 30px;
+    border: 1px solid #000;
+}
+.btnt{
+    width: 100px;
+    height: 30px;
+    margin-left: 400px;
+}

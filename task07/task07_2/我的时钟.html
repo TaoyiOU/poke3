@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的时钟</title>
+</head>
+<body>
+<span>1.格式化输出下面对应的中文日期["2010-1-12","2015-8-8","2018-11-02","1990-12-30"]</span>
+
+<ul id="oul" style="list-style: none">
+    格式化后的结果为：
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<span id="bj"></span>
+<script>
+    //获取标签
+    var oul = document.getElementById('oul');
+    var oli = oul.children;
+    var bj = document.getElementById('bj');
+    //1.自定义时间
+    var dates = ["2010-1-12", "2015-8-8", "2018-11-02", "1990-12-30"];
+    for (var i = 0; i < dates.length; i++) {
+        //获取自定义日期
+        var myDate = new Date(dates[i]);
+        //获取年份
+        var year = myDate.getFullYear();
+        //获取月份 月份从0开始算起
+        //slice(负数)：从尾部往前算，-1 指最后一个元素，-2 指倒数第二个元素
+        var month = ( '0' + (myDate.getMonth() + 1)).slice(-2);
+        //获取日期
+        var day = ('0' + myDate.getDate()).slice(-2);
+        oli[i].innerText = (year + '年' + month + '月' + day + '日');
+    }
+    //2.当前北京时间
+    setInterval(function () {
+        var bjDate = new Date();
+        var bjYear = bjDate.getFullYear();
+        var bjMonth = ('0' + (bjDate.getMonth() + 1)).slice(-2);
+        var bjDay = ('0' + bjDate.getDate()).slice(-2);
+        //toLocaleTimeString()：可根据本地时间把 Date 对象的时间部分转换为字符串，并返回结果。
+        bj.innerText = ('2.当前北京时间：'+bjYear + '年' + bjMonth + '月' + bjDay + '日' + bjDate.toLocaleTimeString());
+    },1000)
+</script>
+</body>
+</html>

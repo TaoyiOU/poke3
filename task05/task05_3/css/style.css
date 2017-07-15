@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.content{
+    width: 1210px;
+    /*height: 800px;*/
+    margin: 100px auto;
+    border-top: 2px solid  darkred;
+}
+.content-left{
+    width: 329px;
+    /*height: 800px;*/
+    /*background: pink;*/
+    float: left;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+}
+.content-left .cl-top{
+    /*width: 330px;*/
+    height: 470px;
+    background: url(../images/pic_big.jpg) no-repeat;
+    position: relative;
+}
+.cl-top .cl-top-list{
+    width: 328px;
+    height: 130px;
+    background: #ECF3EC;
+    position: absolute;
+    bottom: 0;
+    padding: 0 18px;
+    box-sizing: border-box;
+}
+.cl-top .cl-top-list .list{
+    width: 130px;
+    list-style: none;
+    float: left;
+    margin-top: 25px;
+    margin-right: 15px;
+}
+.cl-top .cl-top-list .list li{
+    float: left;
+    margin-right: 8px;
+    font-size: 14px;
+}
+.cl-bottom{
+    border-bottom: 1px solid #000;
+}
+.list:first-child li:first-child,.list:first-child li:nth-child(6){
+    color: red;
+}
+.list:last-child li:nth-child(2),.list:last-child li:nth-child(6){
+    color: red;
+}
+.content-right{
+    width: 880px;
+    /*height: 800px;*/
+    /*background: tomato;*/
+    float: right;
+}
+.content-right .cr-left{
+    width: 439px;
+    background: dodgerblue;
+    border-right: 1px solid #000000;
+    float: left;
+}
+.content-right .cr-right{
+    width: 219px;
+}
+.content-right .cr-left img{
+    border-bottom: 1px solid #000;
+    margin-bottom: -4px;
+    /*float: left;*/
+}
+.content-right .cr-left img:last-child{
+
+}
+
+
+

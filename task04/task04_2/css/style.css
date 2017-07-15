@@ -1,0 +1,84 @@
+/*清空默认边距*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+h1,h2{
+    font-size: 40px;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    color: orangered;
+}
+.box{
+    width: 100%;
+    height: 700px;
+}
+.box1{
+     background: url("../images/h-12.jpg") no-repeat fixed center;
+    position: relative;
+}
+.words1{
+    position: absolute;
+    left: 300px;
+    top: 150px;
+}
+.words1 p{
+    color: #757575;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.words1 span{
+    display: inline-block;
+    color: red;
+    margin-right: 10px;
+    margin-top: 60px;
+}
+.words1 b{
+    font-size: 35px;
+    font-weight: normal;
+    color: red;
+    margin-right: 5px;
+}
+.words1 a{
+    margin-right: 10px;
+}
+.box2{
+    background: url("../images/h-8.jpg") no-repeat fixed center;
+    color: white;
+    position: relative;
+}
+.words2{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    text-align: center;
+}
+.words2 h2{
+    font-size: 38px;
+}
+.words2 p{
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.box3{
+    background: url("../images/h-13.jpg") no-repeat fixed center;
+    position: relative;
+}
+.box4{
+    background: #333 url("../images/bg.png") no-repeat fixed center;
+    position: relative;
+}
+.words4{
+    color: white;
+}
+.box5{
+    background: url("../images/h-24.jpg") no-repeat fixed center;
+    position: relative;
+}
+.box6{
+    background: url("../images/h-21.jpg") no-repeat fixed center;
+    position: relative;
+}
+

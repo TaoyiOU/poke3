@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东注册页面</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/package.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+<!--导航栏开始-->
+<nav>
+    <div class="w">
+        <ul class="fl">
+            <li>
+                <b></b>
+                <a href="#" onclick="alert('收藏成功！')">收藏京东</a>
+            </li>
+        </ul>
+        <ul class="fr">
+            <li>
+                <a href="https://passport.jd.com/uc/login">你好，请登录</a>
+                &nbsp;&nbsp;
+                <a href="https://reg.jd.com/reg/person">免费注册</a>
+            </li>
+            <li>
+                <a href="http://jd2008.jd.com/JdHome/OrderList.aspx">我的订单</a>
+            </li>
+            <li>
+                <a href="https://app.jd.com/">手机京东</a>
+            </li>
+            <li>
+                <a href="javascript:;">客户服务</a>
+            </li>
+            <li>
+                <a href="javascript:;">网站导航</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--导航栏结束-->
+<!--logo栏开始-->
+<div class="w" id="logo">
+    <div>
+        <a href="https://www.jd.com/">
+            <img src="./images/logo-2013.png" alt="京东商城">
+        </a>
+        <b></b>
+    </div>
+</div>
+<!--logo栏结束-->
+<!--注册界面开始-->
+<div class="w" id="regist">
+    <!--登录栏开始-->
+    <div class="regist-login">
+        <ul class="tab">
+            <li>
+                <a href="https://reg.jd.com/register/person">个人用户</a>
+            </li>
+            <li class="curr">企业用户</li>
+            <li>
+                <a href="https://reg.joybuy.com/reg/person.html">International Customers</a>
+            </li>
+        </ul>
+        <div class="regist-enroll">
+        <span>我已经注册，现在就&nbsp;<a href="//passport.jd.com/uc/login" class="flk13">登录</a>
+        </span>
+            <span>
+            <a href="https://reg.joybuy.com/reg/person.html">English</a>
+        </span>
+        </div>
+    </div>
+    <!--登录栏结束-->
+    <!--注册栏开始-->
+    <div class="mc">
+        <div class="reg-top">
+            <img src="./images/reg_top.jpg" alt="">
+            <div class="reg-mes">
+                服务须知：我们的审核时限为24小时(工作日)，遇法定节假日顺延。如有疑问，请拨打企业专享热线：400-026-0000或
+                <a href="http://mygiftcard.jd.com/company/index" target="_blank">留言咨询</a>
+                <a href="https://sale.jd.com/act/2rjmISDG7ZVWKFz.html" target="_blank" class="more">了解更多 &gt;</a>
+            </div>
+        </div>
+        <!--表单开始-->
+        <form action="https://www.baidu.com" id="formcompany" target="_blank" method="get">
+            <div class="form">
+                <h3>账户信息</h3>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        用户名：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="username" class="text" id="username">
+                        <span id="userTips"></span>
+                    </div>
+                </div>
+                <div class="pwd">
+                    <div class="item">
+                        <span class="label">
+                            <b class="star">*</b>
+                            请设置密码：
+                        </span>
+                        <div class="item-ifo">
+                            <input type="password" name="userpwd" class="text" id="userpwd">
+                            <span id="pwdTips1"></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="label">
+                            <b class="star">*</b>
+                            请确认密码：
+                        </span>
+                        <div class="item-ifo">
+                            <input type="password" name="pwdagain" class="text" id="pwdagain">
+                            <span id="pwdTips2"></span>
+                        </div>
+                    </div>
+                </div>
+                <h3>公司信息</h3>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        公司名称：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="companyname" class="text" id="companyname">
+                        <span id="com-nameTips"></span>
+                    </div>
+                </div>
+                <div class="item it-company">
+                    <span class="label">
+                        <b class="star">*</b>
+                        公司所在地：
+                    </span>
+                    <div class="item-ifo">
+                        <select name="province" id="comprovince" class="mar">
+                            <option value="" selected="selected">请选择</option>
+                        </select>
+                        <select name="city" id="comcity" class="mar">
+                            <option value="" selected="selected">请选择</option>
+                        </select>
+                        <select name="area" id="comarea">
+                            <option value="" selected="selected">请选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        公司地址：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="companyaddress" class="text" id="companyaddress">
+                        <span id="addressTips"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        购买类型/用途：
+                    </span>
+                    <div class=" fl item-ifo" style="width: 500px">
+                        <input type="checkbox" name="buytype" class="chkbox" value="IT">
+                        <label class="pad">IT设备</label>
+                        <input type="checkbox" name="buytype" class="chkbox" value="shuma">
+                        <label class="pad">数码通讯</label>
+                        <input type="checkbox" name="buytype" class="chkbox" value="bangong">
+                        <label class="pad">办公用品耗材</label>
+                        <input type="checkbox" name="buytype" class="chkbox" value="jiadian">
+                        <label class="pad">大家电</label>
+                        <input type="checkbox" name="buytype" class="chkbox" value="xiangmu">
+                        <label class="pad">项目合作-政府采购</label>
+                        <input type="checkbox" name="buytype" class="chkbox" value="lipin">
+                        <label class="pad">礼品</label>
+                        <input type="checkbox" name="buytype" class="chkbox" value="shanglv">
+                        <label class="pad">商旅(机票/酒店等)</label>
+                        <input type="checkbox" name="buytype" class="chkbox" value="lipinka">
+                        <label class="pad">礼品卡</label>
+                        <input type="button" id="selAll" value="全选/反选">
+                        <span id="buytypeTips"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        注册邀请码：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="invite" class="text">
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        企业人数：
+                    </span>
+                    <div class="item-ifo">
+                        <select name="number" id="number">
+                            <option selected="selected">请选择</option>
+                            <option value="">1-49</option>
+                            <option value="">50-99</option>
+                            <option value="">100-499</option>
+                            <option value="">500-999</option>
+                            <option value="">1000以上</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        公司行业：
+                    </span>
+                    <div class="item-ifo">
+                        <select name="industry" id="industry">
+                            <option value="-1">请选择</option>
+                            <option value="1">计算机硬件及网络设备</option>
+                            <option value="2">计算机软件</option>
+                            <option value="3">IT服务（系统/数据/维护）/多领域经营</option>
+                            <option value="4">互联网/电子商务</option>
+                            <option value="5">网络游戏</option>
+                            <option value="6">通讯（设备/运营/增值服务）</option>
+                            <option value="7">电子技术/半导体/集成电路</option>
+                            <option value="8">仪器仪表及工业自动化</option>
+                            <option value="9">金融/银行/投资/基金/证券</option>
+                            <option value="10">保险</option>
+                            <option value="11">房地产/建筑/建材/工程</option>
+                            <option value="12">家居/室内设计/装饰装潢</option>
+                            <option value="13">物业管理/商业中心</option>
+                            <option value="14">广告/会展/公关/市场推广</option>
+                            <option value="15">媒体/出版/影视/文化/艺术</option>
+                            <option value="16">印刷/包装/造纸</option>
+                            <option value="17">咨询/管理产业/法律/财会</option>
+                            <option value="18">教育/培训</option>
+                            <option value="19">检验/检测/认证</option>
+                            <option value="20">中介服务</option>
+                            <option value="21">贸易/进出口</option>
+                            <option value="22">零售/批发</option>
+                            <option value="23">快速消费品（食品/饮料/烟酒/化妆品</option>
+                            <option value="24">耐用消费品（服装服饰/纺织/皮革/家具/家电）</option>
+                            <option value="25">办公用品及设备</option>
+                            <option value="26">礼品/玩具/工艺美术/收藏品</option>
+                            <option value="27">大型设备/机电设备/重工业</option>
+                            <option value="28">加工制造（原料加工/模具）</option>
+                            <option value="29">汽车/摩托车（制造/维护/配件/销售/服务）</option>
+                            <option value="30">交通/运输/物流</option>
+                            <option value="31">医药/生物工程</option>
+                            <option value="32">医疗/护理/美容/保健</option>
+                            <option value="33">医疗设备/器械</option>
+                            <option value="34">酒店/餐饮</option>
+                            <option value="35">娱乐/体育/休闲</option>
+                            <option value="36">旅游/度假</option>
+                            <option value="37">石油/石化/化工</option>
+                            <option value="38">能源/矿产/采掘/冶炼</option>
+                            <option value="39">电气/电力/水利</option>
+                            <option value="40">航空/航天</option>
+                            <option value="41">学术/科研</option>
+                            <option value="42">政府/公共事业/非盈利机构</option>
+                            <option value="43">环保</option>
+                            <option value="44">农/林/牧/渔</option>
+                            <option value="45">跨领域经营</option>
+                            <option value="46">其它</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        公司性质：
+                    </span>
+                    <div class="item-ifo">
+                        <select id="nature" name="nature">
+                            <option value="-1">请选择</option>
+                            <option value="1">政府机关/事业单位</option>
+                            <option value="2">国营</option>
+                            <option value="3">私营</option>
+                            <option value="4">中外合资</option>
+                            <option value="5">外资</option>
+                            <option value="6">其他</option>
+                        </select>
+                    </div>
+                </div>
+                <h3>联系人信息</h3>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        联系人姓名：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="contactname" class="text" id="contactname">
+                        <span id="contactnameTips"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        所在部门：
+                    </span>
+                    <div class="item-ifo">
+                        <select name="department" id="department">
+                            <option value="-1">请选择</option>
+                            <option value="1">办公室</option>
+                            <option value="2">市场部</option>
+                            <option value="3">采购部</option>
+                            <option value="4">技术部</option>
+                            <option value="5">人力资源</option>
+                            <option value="6">其他</option>
+                        </select>
+                        <span id="departmentTips"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        固定电话：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="phone" class="text" id="phone">
+                        <span id="phoneTips"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        验证手机：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="checkphone" class="text" id="checkphone">
+                        <span id="checkphoneTips"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        短信验证码：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="msgcode" class="text" style="width: 100px;" id="msgcode">
+                        <a href="javascript:;" class="btn" id="btn">获取短信验证码</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        联系人邮箱：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="email" class="text">
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">
+                        <b class="star">*</b>
+                        验证码：
+                    </span>
+                    <div class="item-ifo">
+                        <input type="text" name="checkcode" class="text" style="width: 100px;" id="checkcode">
+                        <label class="img">
+                            <img src="./images/code.jpg" alt="">
+                        </label>
+                        <label class="changeimg">
+                            看不清？
+                            <a href="javascript:;" onclick="alert('就这一张~')">换一张</a>
+                        </label>
+                        <span id="checkcodeTips" style="position: absolute;left: 650px;top: 10px;color: red"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">&nbsp;</span>
+                    <div class="item-ifo">
+                        <input type="checkbox" checked="checked">
+                        <label>我已阅读并同意
+                            <a href="javascript:;" style="color: blue" id="re">《京东用户注册协议》</a>
+                            <a href="javascript:;" style="color: blue" id="re2">《隐私政策》</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="label">&nbsp;</span>
+                    <div class="item-ifo">
+                        <input type="button" class="btn-img" id="submitBtn">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--表单结束-->
+    </div>
+    <!--注册栏结束-->
+</div>
+<!--注册界面结束-->
+<!--底部开始-->
+<footer class="w">
+    <div id="foot">
+        <div class="link">
+            <a href="https://www.jd.com/intro/about.aspx">关于我们</a>
+            |
+            <a href="https://www.jd.com/contact/">联系我们</a>
+            |
+            <a href="https://zhaopin.jd.com/">人才招聘</a>
+            |
+            <a href="https://www.jd.com/contact/joinin.aspx">商家入驻</a>
+            |
+            <a href="https://www.jd.com/intro/service.aspx">广告服务</a>
+            |
+            <a href="https://app.jd.com/">手机京东</a>
+            |
+            <a href="https://club.jd.com/links.aspx">友情链接</a>
+            |
+            <a href="https://media.jd.com/">销售联盟</a>
+            |
+            <a href="https://club.jd.com/">京东社区</a>
+            |
+            <a href="https://gongyi.jd.com/">京东公益</a>
+            |
+            <a href="https://en.jd.com/">English Site</a>
+        </div>
+        <div class="copyright">Copyright&copy;2004-2016&nbsp;&nbsp;京东JD.com&nbsp;版权所有</div>
+    </div>
+</footer>
+<!--底部结束-->
+<!--弹框-->
+<div id="thickdiv"></div>
+<div id="login">
+    <div class="logintitle">
+        <span>京东用户注册协议</span>
+    </div>
+    <div class="loginon">
+        <div class="logincontent">
+            <h4>京东用户注册协议</h4><p>本协议是用户（以下简称“您”）与京东网站（网址：包括但不限于www.jd.com等，简称“本站”）所有者及其关联公司（以下简称为“京东”）之间就京东网站服务等相关事宜所订立的契约，请您仔细阅读本注册协议，您点击"同意并继续"按钮后，即视为您接受并同意遵守本协议的约定。</p><h5> 第1条 本站服务条款的确认和接纳</h5><p><strong>1.1</strong>本站的各项电子服务的所有权和运作权归京东所有。您同意所有注册协议条款并完成注册程序，才能成为本站的正式用户。您确认：本协议条款是处理双方权利义务的依据，始终有效，法律另有强制性规定或双方另有特别约定的，依其规定或约定。</p><p><strong>1.2</strong>您点击同意本协议的，即视为您确认自己具有享受本站服务、下单购物等相应的权利能力和行为能力，能够独立承担法律责任。</p><p><strong>1.3</strong>您确认，如果您在18周岁以下，您只能在父母或其他监护人的监护参与下才能使用本站。</p>1.4<strong><em>京东保留在中华人民共和国大陆地区施行之法律允许的范围内独自决定拒绝服务、关闭用户账户、清除或编辑内容或取消订单的权利。</em></strong><p><strong>1.5</strong>您使用本站提供的服务时，应同时接受适用于本站特定服务、活动等的准则、条款和协议（以下统称为“其他条款”）；如果以下使用条件与“其他条款”有不一致之处，则以“其他条款”为准。</p><p><strong>1.6</strong>为表述便利，商品和服务简称为“商品”或“货物”。</p><h5> 第2条 本站服务</h5><p><strong>2.1</strong>京东通过互联网依法为您提供互联网信息等服务，您在完全同意本协议及本站相关规定的情况下，方有权使用本站的相关服务。</p><p><strong>2.2</strong>您必须自行准备如下设备和承担如下开支：（1）上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；（2）上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p><p><strong>2.2.1</strong>上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；</p><p><strong>2.2.2</strong>上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p><p><strong>2.2.1</strong>上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；</p><p><strong>2.2.2</strong>上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p><p><strong>2.2.1</strong>上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；</p><p><strong>2.2.2</strong>上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p>
+        </div>
+        <button class="btnt" id="btnt">同意并继续</button>
+    </div>
+</div>
+
+<div id="login2">
+    <div class="logintitle">
+        <span>隐私政策</span>
+    </div>
+    <div class="loginon">
+        <div class="logincontent">
+            <h4>隐私政策</h4><p>本协议是用户（以下简称“您”）与京东网站（网址：包括但不限于www.jd.com等，简称“本站”）所有者及其关联公司（以下简称为“京东”）之间就京东网站服务等相关事宜所订立的契约，请您仔细阅读本注册协议，您点击"同意并继续"按钮后，即视为您接受并同意遵守本协议的约定。</p><h5> 第1条 本站服务条款的确认和接纳</h5><p><strong>1.1</strong>本站的各项电子服务的所有权和运作权归京东所有。您同意所有注册协议条款并完成注册程序，才能成为本站的正式用户。您确认：本协议条款是处理双方权利义务的依据，始终有效，法律另有强制性规定或双方另有特别约定的，依其规定或约定。</p><p><strong>1.2</strong>您点击同意本协议的，即视为您确认自己具有享受本站服务、下单购物等相应的权利能力和行为能力，能够独立承担法律责任。</p><p><strong>1.3</strong>您确认，如果您在18周岁以下，您只能在父母或其他监护人的监护参与下才能使用本站。</p>1.4<strong><em>京东保留在中华人民共和国大陆地区施行之法律允许的范围内独自决定拒绝服务、关闭用户账户、清除或编辑内容或取消订单的权利。</em></strong><p><strong>1.5</strong>您使用本站提供的服务时，应同时接受适用于本站特定服务、活动等的准则、条款和协议（以下统称为“其他条款”）；如果以下使用条件与“其他条款”有不一致之处，则以“其他条款”为准。</p><p><strong>1.6</strong>为表述便利，商品和服务简称为“商品”或“货物”。</p><h5> 第2条 本站服务</h5><p><strong>2.1</strong>京东通过互联网依法为您提供互联网信息等服务，您在完全同意本协议及本站相关规定的情况下，方有权使用本站的相关服务。</p><p><strong>2.2</strong>您必须自行准备如下设备和承担如下开支：（1）上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；（2）上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p><p><strong>2.2.1</strong>上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；</p><p><strong>2.2.2</strong>上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p><p><strong>2.2.1</strong>上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；</p><p><strong>2.2.2</strong>上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p><p><strong>2.2.1</strong>上网设备，包括并不限于电脑或者其他上网终端、调制解调器及其他必备的上网装置；</p><p><strong>2.2.2</strong>上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。</p>
+        </div>
+        <button class="btnt" id="btnt2">同意并继续</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片热点地图练习</title>
+</head>
+<body>
+<img src="images/img.png" alt="图片丢失" usemap="uMap">
+<map name="uMap">
+    <!--矩形,只要测对角两个点的坐标即可-->
+    <area shape="rect" coords="15,16,123,55" href="http://jiuye.jikexueyuan.com" target="_blank">
+    <!--圆形，只要测圆心到图片左上角的距离+半径-->
+    <area shape="circle" coords="937,33,23" href="http://www.jikexueyuan.com/" target="_blank">
+    <area shape="circle" coords="995,33,23" href="http://www.w3school.com.cn/" target="_blank">
+    <!--多边形，需要测每个角到图片左上角的距离 顺时针-->
+    <area shape="poly" coords="728,19,825,19,850,65,753,65" href="https://www.baidu.com/" target="_blank">
+
+</map>
+</body>
+</html>

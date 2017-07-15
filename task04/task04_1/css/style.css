@@ -1,0 +1,61 @@
+/*清空默认边距*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background: #F5F5F5;
+}
+a{
+    text-decoration: none;
+    color: #136ec2;
+}
+p{
+    margin: 10px 0 20px;
+    text-indent: 2em;
+}
+.dbody{
+    width: 850px;
+    border: 1px solid #000;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+}
+h1,h2,h3{
+    font-weight: normal;
+}
+h2 a{
+    display: inline-block;
+    color: #000;
+    margin-top: 15px;
+}
+.h1-title{
+    font-size: 14px;
+    color: #888888;
+}
+.h1-title a{
+    border: 1px solid #579BE0;
+    color: #579BE0;
+}
+.title-w3c{
+    color: #579BE0;
+    font-size: 10px;
+}
+.catalog{
+    width: 300px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 25px 30px;
+}
+.catalog ol{
+    padding-left: 30px;
+    line-height: 25px;
+}
+img{
+    float: right;
+    border: 1px solid #ccc;
+}
+.footer h3{
+    border-bottom: 2px solid #ccc;
+}

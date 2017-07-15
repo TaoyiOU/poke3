@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02js创建表格</title>
+</head>
+<body>
+<button id="delBtn">删除行</button>
+<script>
+    //获取标签
+    var delBtn = document.getElementById('delBtn');
+    //1.创建table
+    var table = document.createElement('table');
+    table.border = 1;
+    table.width = 400;
+    table.cellPadding = 0;
+    table.cellSpacing = 0;
+    document.body.appendChild(table);
+
+    //2.为表格创建一个标题
+    table.createCaption().appendChild(document.createTextNode('表格标题'));
+
+    //3.给表格创建一个tbody
+    var tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+
+    //4.在表格中创建第一行
+    tbody.insertRow(0);
+    //4.1插入第一个单元格
+    tbody.rows[0].insertCell(0);
+    //4.2给第一个单元格设置内容
+    tbody.rows[0].cells[0].appendChild(document.createTextNode('1-1'));
+    //4.3插入第二个单元格
+    tbody.rows[0].insertCell(1);
+    //4.4给第二个单元格添加内容
+    tbody.rows[0].cells[1].appendChild(document.createTextNode('1-2'));
+
+    //5.在表格中创建第二行
+    tbody.insertRow(1);
+    //5.1插入第一个单元格
+    tbody.rows[1].insertCell(0);
+    //5.2给第一个单元格设置内容
+    tbody.rows[1].cells[0].appendChild(document.createTextNode('2-1'));
+    //5.3插入第二个单元格
+    tbody.rows[1].insertCell(1);
+    //5.4给第二个单元格设置内容
+    tbody.rows[1].cells[1].appendChild(document.createTextNode('2-2'));
+    //删除行
+    delBtn.onclick = function () {
+        table.deleteRow(1); //删除第二行
+    }
+</script>
+</body>
+</html>
